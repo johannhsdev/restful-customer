@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('regions', function (Blueprint $table) {
-            $table->id('id_reg');
+            $table->id();
             $table->string('description', 90);
             $table->enum('status', ['A', 'I', 'trash'])->default('A')->comment('Estado de la región: A (Activa) I (Inactiva) trash (Eliminada)');
             $table->timestamps();

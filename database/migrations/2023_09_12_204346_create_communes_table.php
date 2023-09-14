@@ -12,7 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('communes', function (Blueprint $table) {
-            $table->id('id_com');
+            $table->id();
             $table->unsignedBigInteger('id_reg')->comment('ID de la región');
             $table->string('description', 90);
             $table->enum('status', ['A', 'I', 'trash'])->default('A')->comment('Estado de la comuna: A (Activa) I (Inactiva) trash (Eliminada)');
